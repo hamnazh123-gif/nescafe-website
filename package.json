@@ -1,0 +1,13 @@
+{
+  "name": "nescafe-website",
+  "version": "1.0.0",
+  "description": "Nescafé Gold Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "devDependencies": {
+    "isomorphic-git": "^1.38.5"
+  }
+}

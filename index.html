@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NESCAFÉ Gold - Experience the Golden Roast</title>
+    <meta name="description" content="Immerse yourself in the craft of NESCAFÉ Gold. A premium scroll-animated journey through roasting, selection, and ultimate coffee craftsmanship.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Preloader Screen -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="brand-text">NESCAFÉ</span>
+                <span class="gold-text">GOLD</span>
+            </div>
+            <div class="loader-status">
+                <div class="loader-bar-container">
+                    <div class="loader-bar" id="loader-progress"></div>
+                </div>
+                <p class="loader-message" id="loader-msg">Selecting the finest beans...</p>
+                <p class="loader-percentage" id="loader-pct">0%</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="brand">NESCAFÉ</span>
+                <span class="sub-brand">GOLD</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#scroll-container" class="nav-link">The Journey</a>
+                <a href="#brew-guide" class="nav-link">Brewing</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn btn-gold btn-sm btn-order-trigger">Experience Gold</button>
+                <button class="burger-menu-btn" id="burger-btn" aria-label="Toggle menu">
+                    <span class="burger-bar"></span>
+                    <span class="burger-bar"></span>
+                    <span class="burger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer glass-panel">
+        <div class="drawer-header">
+            <a href="#" class="logo">
+                <span class="brand">NESCAFÉ</span>
+                <span class="sub-brand">GOLD</span>
+            </a>
+            <button class="close-drawer-btn" id="close-drawer" aria-label="Close menu">&times;</button>
+        </div>
+        <nav class="mobile-nav-menu">
+            <a href="#scroll-container" class="mobile-nav-link">The Journey</a>
+            <a href="#brew-guide" class="mobile-nav-link">Brewing</a>
+            <button class="btn btn-gold btn-sm btn-order-trigger" style="margin-top: 1rem; width: 100%;">Order Now</button>
+        </nav>
+    </div>
+
+    <!-- Scroll Animation Section -->
+    <main id="scroll-container">
+        <!-- Sticky Canvas Background -->
+        <div class="canvas-sticky-wrapper">
+            <canvas id="animation-canvas"></canvas>
+            <div class="canvas-overlay"></div>
+        </div>
+
+        <!-- Scroll Overlay Content (Text & Storytelling) -->
+        <section class="scroll-trigger-section" id="slide-1">
+            <div class="slide-content center-align">
+                <h1 class="hero-title fade-in-up">
+                    <span class="subtitle">Introducing</span>
+                    <span class="main-title">A Masterpiece<br>In Every Cup</span>
+                </h1>
+                <p class="hero-desc fade-in-up delay-1">Scroll down to roast your senses and uncover the art of coffee crafting.</p>
+                <div class="scroll-indicator">
+                    <span class="mouse-icon">
+                        <span class="wheel"></span>
+                    </span>
+                    <span class="indicator-text">Scroll to Begin</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-trigger-section" id="slide-2">
+            <div class="slide-content left-align">
+                <div class="story-card glass-panel">
+                    <span class="card-tag">01 / The Origin</span>
+                    <h2>Selected Arabica & Robusta</h2>
+                    <p>Every story starts with the beans. We source only the highest quality Arabica and Robusta beans, carefully handpicking those that meet our rigorous standards of aroma, taste, and complexity.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-trigger-section" id="slide-3">
+            <div class="slide-content right-align">
+                <div class="story-card glass-panel">
+                    <span class="card-tag">02 / The Roast</span>
+                    <h2>The Art of Golden Roasting</h2>
+                    <p>Roasting is where the magic awakens. Our signature golden roasting process unlocks a sophisticated spectrum of flavor notes, achieving a perfect balance between rich strength and smooth, velvety textures.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-trigger-section" id="slide-4">
+            <div class="slide-content center-align">
+                <div class="story-card glass-panel center-card">
+                    <span class="card-tag">03 / The Finish</span>
+                    <h2>Unrivalled Crema & Aroma</h2>
+                    <p>As you pour, watch the beautiful golden crema form on the surface. Take a moment to breathe in the intense, rich aroma. This is coffee made for those who appreciate the finer details in life.</p>
+                    <button class="btn btn-gold btn-order-trigger mt-2">Order Nescafe Gold</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Content Sections Below the Scroll Animation -->
+
+    <!-- Section 4: Premium Brewing Guide -->
+    <section id="brew-guide" class="content-section">
+        <div class="section-container">
+            <div class="section-header text-center">
+                <span class="section-label">Brewing Ritual</span>
+                <h2>The Perfect Golden Cup</h2>
+                <p class="section-subtitle">Make coffee brewing an intentional ritual. Follow these steps to unlock the full potential of NESCAFÉ Gold.</p>
+            </div>
+            
+            <div class="brew-steps">
+                <!-- Step 1 -->
+                <div class="brew-step">
+                    <div class="step-num">01</div>
+                    <h4>The Measure</h4>
+                    <p>Add 1 to 2 teaspoons (approx. 2g per cup) of NESCAFÉ Gold to your favorite mug, depending on your preferred strength.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="brew-step">
+                    <div class="step-num">02</div>
+                    <h4>The Temperature</h4>
+                    <p>Pour hot (but not boiling) water (approx. 85°C / 185°F). Water that is too hot can burn the delicate micro-grains and ruin the aroma.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="brew-step">
+                    <div class="step-num">03</div>
+                    <h4>The Infusion</h4>
+                    <p>Stir gently. Watch the golden crema bloom on the surface, releasing the rich, locked-in coffee oils. Allow to cool slightly and savor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Experience Gold CTA -->
+    <section id="experience" class="content-section cta-section">
+        <div class="section-container">
+            <div class="cta-card glass-panel">
+                <h2>Bring Luxury Home</h2>
+                <p>Elevate your everyday coffee moment. Experience the rich taste and smooth aroma of our signature golden blend today.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-gold btn-order-trigger">Order Nescafe Gold</button>
+                    <a href="#" class="btn btn-outline">Find a Retailer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="brand">NESCAFÉ</span>
+                    <span class="sub-brand">GOLD</span>
+                </a>
+                <p class="brand-desc">Crafted with care, passion, and respect for our coffee growing communities since 1938.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>The Brand</h4>
+                    <a href="#">Our Story</a>
+                    <a href="#">The NESCAFÉ Plan</a>
+                    <a href="#">Sustainability</a>
+                </div>
+                <div class="link-group">
+                    <h4>Products</h4>
+                    <a href="#">Gold Blend</a>
+                    <a href="#">Gold Espresso</a>
+                    <a href="#">Gold Decaf</a>
+                </div>
+                <div class="link-group">
+                    <h4>Support</h4>
+                    <a href="#">Contact Us</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Where to Buy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nestlé. All rights reserved. Designed for Nescafe Enthusiasts.</p>
+        </div>
+    </footer>
+
+    <!-- Product Order Modal -->
+    <div id="order-modal" class="modal-overlay">
+        <div class="modal-container glass-panel">
+            <button class="modal-close-btn" id="close-order-modal" aria-label="Close modal">&times;</button>
+            
+            <!-- Step Progress Indicator -->
+            <div class="checkout-progress">
+                <div class="progress-step active" id="step-indicator-1">
+                    <span class="step-number">1</span>
+                    <span class="step-label">Select Blend</span>
+                </div>
+                <div class="progress-line" id="progress-line"></div>
+                <div class="progress-step" id="step-indicator-2">
+                    <span class="step-number">2</span>
+                    <span class="step-label">Delivery Info</span>
+                </div>
+            </div>
+
+            <form id="order-form" class="order-form">
+                <!-- Step 1: Product & Quantity -->
+                <div class="step-panel active" id="step-panel-1">
+                    <div class="modal-header">
+                        <h2>Select Your Roast</h2>
+                        <p>Experience the premium selection of our slow roasted beans.</p>
+                    </div>
+
+                    <!-- Product Selector Cards -->
+                    <div class="form-group">
+                        <div class="product-cards-grid">
+                            <div class="product-card active" data-product="NESCAFÉ Gold Blend">
+                                <div class="product-badge">Signature</div>
+                                <h4>Gold Blend</h4>
+                                <p class="product-desc">Smooth & aromatic golden roast.</p>
+                            </div>
+                            <div class="product-card" data-product="NESCAFÉ Gold Espresso">
+                                <h4>Gold Espresso</h4>
+                                <p class="product-desc">Strong & rich with thick golden crema.</p>
+                            </div>
+                            <div class="product-card" data-product="NESCAFÉ Gold Decaf">
+                                <h4>Gold Decaf</h4>
+                                <p class="product-desc">Premium taste, decaffeinated.</p>
+                            </div>
+                        </div>
+                        <input type="hidden" id="selected-product" name="product" value="NESCAFÉ Gold Blend">
+                    </div>
+
+                    <!-- Quantity Selector -->
+                    <div class="form-group">
+                        <label for="order-quantity" class="form-label">Quantity (Jars)</label>
+                        <div class="quantity-selector">
+                            <button type="button" class="qty-btn" id="qty-minus">-</button>
+                            <input type="number" id="order-quantity" name="quantity" value="1" min="1" max="10" readonly>
+                            <button type="button" class="qty-btn" id="qty-plus">+</button>
+                        </div>
+                    </div>
+
+                    <div class="checkout-footer">
+                        <button type="button" class="btn btn-gold btn-block" id="next-step-btn">Continue to Shipping</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Shipping Details -->
+                <div class="step-panel" id="step-panel-2">
+                    <div class="modal-header">
+                        <h2>Shipping Details</h2>
+                        <p>Provide your delivery information to complete the order.</p>
+                    </div>
+
+                    <!-- Customer Details -->
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="customer-name" class="form-label">Full Name</label>
+                            <input type="text" id="customer-name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-email" class="form-label">Email Address</label>
+                            <input type="email" id="customer-email" name="email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-address" class="form-label">Delivery Address</label>
+                        <textarea id="customer-address" name="address" rows="3" required placeholder="123 Luxury St, Apt 4B, City, Country"></textarea>
+                    </div>
+
+                    <div class="checkout-footer button-group">
+                        <button type="button" class="btn btn-outline" id="prev-step-btn">Back</button>
+                        <button type="submit" class="btn btn-gold" id="submit-order-btn">
+                            <span class="btn-text">Confirm Order</span>
+                            <span class="btn-loader" style="display: none;"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div id="success-modal" class="modal-overlay">
+        <div class="modal-container success-container glass-panel">
+            <div class="success-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="success-checkmark">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h2>Order Placed Successfully</h2>
+            <p class="success-message">Your golden coffee experience is on the way. We have received your order details.</p>
+            
+            <div class="order-summary-box">
+                <div class="summary-row">
+                    <span class="summary-label">Order ID:</span>
+                    <span class="summary-value gold-text" id="display-order-id">NES-GOLD-XXXXXX</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Product:</span>
+                    <span class="summary-value" id="display-product">NESCAFÉ Gold Blend</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Quantity:</span>
+                    <span class="summary-value" id="display-qty">1 Jar</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Deliver To:</span>
+                    <span class="summary-value" id="display-name">John Doe</span>
+                </div>
+            </div>
+            
+            <button type="button" class="btn btn-gold" id="close-success-btn">Back to Journey</button>
+        </div>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
